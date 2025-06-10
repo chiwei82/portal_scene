@@ -1,25 +1,19 @@
-// portal.frag — 移植自 Shadertoy 的 volumetric shader
-// 可用於 React Three Fiber 的 ShaderMaterial（配合 portal_material.jsx）
+// inspired by https://www.shadertoy.com/view/tfG3zt
 
 precision highp float;
-
-uniform vec2 uResolution;
 varying vec2 vUv;
 uniform vec3 uColor;
 uniform float uTime;
 
-// 旋轉矩陣
 mat2 rot(float x) {
   return mat2(cos(x), -sin(x), sin(x), cos(x));
 }
 
-// 色盤
 vec3 pal(float x) {
   return 0.5 + 0.5 * cos(6.2831 * x - vec3(5.0, 0.0, 2.0));
 }
 
 void main() {
-  vec2 fragCoord = vUv * uResolution;
   vec2 uv = vUv - 0.5;
   float tt = uTime * 0.1;
 
