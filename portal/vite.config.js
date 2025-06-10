@@ -4,6 +4,7 @@ import glsl from 'vite-plugin-glsl'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/portal_scene/',
   plugins: [
     react(),
     glsl({
