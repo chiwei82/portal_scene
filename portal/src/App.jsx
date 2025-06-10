@@ -54,7 +54,6 @@ function App() {
         obj.material = rockMaterial
       }
     
-      // ✅ 補在這裡：portal_rock, ladder, plane, bracket
       const others = ['portal_rock', 'ladder', 'plane', 'bracket', 'rope', 'lamp']
       if (others.some(keyword => name.includes(keyword))) {
         obj.material = allothersMaterial
