@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Canvas } from '@react-three/fiber'
+import { Loader } from '@react-three/drei'
 import './index.css'
 import App from './App.jsx'
 import Particle from './particle'
@@ -19,5 +20,6 @@ createRoot(document.getElementById('root')).render(
       <App />
       <Particle />
     </Canvas>
+    <Loader />
   </StrictMode>,
 )
